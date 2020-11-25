@@ -274,7 +274,7 @@ github.com/robfig/cron/v3
 # github.com/rogpeppe/fastuuid v1.2.0
 ## explicit
 github.com/rogpeppe/fastuuid
-# github.com/rogpeppe/go-internal v1.5.2
+# github.com/rogpeppe/go-internal v1.6.1
 github.com/rogpeppe/go-internal/modfile
 github.com/rogpeppe/go-internal/module
 github.com/rogpeppe/go-internal/semver
@@ -389,8 +389,7 @@ golang.org/x/text/unicode/norm
 golang.org/x/text/width
 # golang.org/x/time v0.0.0-20200630173020-3af7569d3a1e
 golang.org/x/time/rate
-# golang.org/x/tools v0.0.0-20201022035929-9cf592e881e9
-## explicit
+# golang.org/x/tools v0.0.0-20201110032815-ae45d7cf37a9
 golang.org/x/tools/cmd/goimports
 golang.org/x/tools/go/ast/astutil
 golang.org/x/tools/go/gcexportdata
@@ -960,7 +959,7 @@ k8s.io/utils/trace
 # knative.dev/hack v0.0.0-20201112185459-01a34c573bd8
 ## explicit
 knative.dev/hack
-# knative.dev/pkg v0.0.0-20201103163404-5514ab0c1fdf => github.com/lberk/pkg v0.0.0-20201116203858-2b82a3a38ce6
+# knative.dev/pkg v0.0.0-20201103163404-5514ab0c1fdf => /home/lberk/src/knative/src/knative.dev/pkg
 ## explicit
 knative.dev/pkg/apiextensions/storageversion
 knative.dev/pkg/apiextensions/storageversion/cmd/migrate
@@ -1094,4 +1093,4 @@ sigs.k8s.io/yaml
 # k8s.io/apimachinery => k8s.io/apimachinery v0.18.8
 # k8s.io/client-go => k8s.io/client-go v0.18.8
 # k8s.io/code-generator => k8s.io/code-generator v0.18.8
-# knative.dev/pkg => github.com/lberk/pkg v0.0.0-20201116203858-2b82a3a38ce6
+# knative.dev/pkg => /home/lberk/src/knative/src/knative.dev/pkg

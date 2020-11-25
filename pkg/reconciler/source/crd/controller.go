@@ -52,15 +52,14 @@ func NewController(
 	}
 	impl := crdreconciler.NewImpl(ctx, r, func(impl *controller.Impl) controller.Options {
 		return controller.Options{
-			AgentName: ReconcilerName,
+			AgentName:        ReconcilerName,
+			GlobalFilterFunc: filterFunc,
 		}
 	})
 
-	impl.GlobalResyncFilterFunc = filterFunc
-
-	grCb := func(obj interface{}) {
+	/*	grCb := func(obj interface{}) {
 		impl.FilteredGlobalResync(filterFunc, crdInformer.Informer())
-	}
+	}*/
 
 	logger.Info("Setting up event handlers")
 	crdInformer.Informer().AddEventHandler(cache.FilteringResourceEventHandler{
@@ -68,10 +67,10 @@ func NewController(
 		Handler:    controller.HandleAll(impl.Enqueue),
 	})
 
-	crdInformer.Informer().AddEventHandler(cache.FilteringResourceEventHandler{
+	/*	crdInformer.Informer().AddEventHandler(cache.FilteringResourceEventHandler{
 		FilterFunc: filterFunc,
 		Handler:    controller.HandleAll(grCb),
-	})
+	})*/
 
 	return impl
 }
